@@ -1,0 +1,52 @@
+#include <QtTest>
+#include <QCoreApplication>
+
+#include "Common.h"
+
+#include <vtkAutoInit.h>
+VTK_MODULE_INIT(vtkRenderingOpenGL2);
+VTK_MODULE_INIT(vtkInteractionStyle);
+
+class casename : public QObject
+{
+    Q_OBJECT
+
+public:
+    casename();
+    ~casename();
+
+private slots:
+    void initTestCase();
+    void cleanupTestCase();
+    void test_case1();
+
+};
+
+casename::casename()
+{
+
+}
+
+casename::~casename()
+{
+
+}
+
+void casename::initTestCase()
+{
+    checkLicense();
+}
+
+void casename::cleanupTestCase()
+{
+
+}
+
+void casename::test_case1()
+{
+
+}
+
+QTEST_MAIN(casename)
+
+#include "casename.moc"

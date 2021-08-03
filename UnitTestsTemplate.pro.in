@@ -1,0 +1,13 @@
+CASENAME = casename
+
+include (../UnitTests.pri)
+include (../../ESDicomStore.pro)
+include($$PWD/../../SOUPDependency/dcmtk-3.6.4/dcmtk-3.6.4.pri)
+include($$PWD/../../SOUPDependency/zlib-1.2.11/zlib.pri)
+
+SOURCES += \
+    ../Common.cpp \
+    casename.cpp
+
+HEADERS += \
+    ../Common.h
